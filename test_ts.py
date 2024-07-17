@@ -103,7 +103,27 @@ def generate_test_for_routine( routine_name, working_example, routine_arg_types,
     return test
 
 def generate_ts_tests(routine_name, working_example, routine_arg_types, working_ndarray_example, ndarray_routine_arg_types):
-    test = "import " + routine_name + " = require( './index' );\n\n\n"
+    test = """
+/*
+* @license Apache-2.0
+*
+* Copyright (c) 2024 The Stdlib Authors.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*    http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+"""
+    test += "\n"
+    test += "import " + routine_name + " = require( './index' );\n\n\n"
     test += "// TESTS //\n\n"
     test += "// The function returns a Float64Array...\n"
     test += "{\n"
