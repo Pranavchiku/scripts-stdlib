@@ -77,7 +77,9 @@ dptts2.ndarray( 'row-major', 3, 2, D, 1, 0, E, 1, 0, B, 2, 1, 0 ); // $ExpectTyp
 
 from generate_docs_types import generate_docs_types
 from generate_lib import generate_lib
+from generate_test import generate_test
 
 if __name__ == '__main__':
     generate_docs_types(routine_name, jsdoc, jsdoc_ndarray, working_example, working_ndarray_example)
     generate_lib(routine_name, jsdoc, jsdoc_ndarray)
+    generate_test(routine_name)

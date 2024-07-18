@@ -83,9 +83,8 @@ var main = require( './main.js' );
     out += "} else {\n"
     out += "\t" + routine_name + " = tmp;\n"
     out += "}\n"
-    out += "\n"
+    out += "\n\n"
 
-    out += "// EXPORTS //\n"
-    out += "\n"
+    out += "// EXPORTS //\n\n"
     out += "module.exports = " + routine_name + ";\n"
     return out
